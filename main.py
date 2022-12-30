@@ -17,21 +17,31 @@ try:
     while True:
 
         # Get touch sensor status
-        touchButton = BP.get_sensor(BP.PORT_1)
+        touchButton = BP.get_sensor(BP.PORT_A)
             
         # If the touch sensor is pressed
         if touchButton:
 
-            # Power functions motors and lights can be powered using motor code
             BP.set_motor_power(BP.PORT_A, 100)
             BP.set_motor_power(BP.PORT_B, 100)
+
+            # Turn off BrickPi on board LED
+            BP.set_led(1) 
+
+            # Turn on Raspberry Pi on board LED
+            os.system('echo 1 | sudo dd status=none of=/sys/class/leds/led0/brightness') 
         
         # If the touch sensor is released
         else:
 
-            # Power functions motors and lights can be powered using motor code
             BP.set_motor_power(BP.PORT_A, 0)
             BP.set_motor_power(BP.PORT_B, 0)
+
+            # Turn off BrickPi on board LED
+            BP.set_led(0)
+
+            # Turn off Raspberry Pi on board LED
+            os.system('echo 0 | sudo dd status=none of=/sys/class/leds/led0/brightness')
 
         # Loop delay
         time.sleep(0.1)
