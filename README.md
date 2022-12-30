@@ -1,6 +1,6 @@
 # Dexter BrickPi and Power Functions
 
-A Python snippet utilizing Power Functions Motors and LIghts, the EV3 Touch sensor, the Dexter PrickPi and [BrickPi3](https://github.com/DexterInd/BrickPi3). [BrickPi3](https://github.com/DexterInd/BrickPi3) is the Dexter recommended method of using the BrickPi with Python. 
+A Python snippet utilizing Power Functions Motors and Lights, the EV3 Touch sensor, the Dexter BrickPi and [BrickPi3](https://github.com/DexterInd/BrickPi3). [BrickPi3](https://github.com/DexterInd/BrickPi3) is the Dexter recommended method of using the BrickPi with Python. 
 
 This example turns on the Power Functions lights and motors when the touch sensor is pushed.
 
